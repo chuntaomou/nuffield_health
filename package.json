@@ -1,0 +1,16 @@
+{
+  "name": "nuffield_health",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chuntao mou",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "repository": {
+  }
+}
