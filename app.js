@@ -50,9 +50,9 @@ var Request=require('tedious').Request;
 var config={
   userName:'ucabcm2',
   password:'Mct.niub74110',
-  server:'http://nuffhealthproject.azurewebsites.net',
+  server:'nuffieldhealth20170610.database.windows.net',
   options:{
-    database:'nuffhealth_DB'
+    database:'nuffieldhealth_db'
   }
 }
 var connection=new Connection(config);
