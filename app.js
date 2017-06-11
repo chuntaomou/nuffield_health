@@ -44,36 +44,35 @@ app.use(function(err, req, res, next) {
 });
 ///////////////////////////////////////////////
 //insert data into database
-var Connection=require('tedious').Connection;
-var Request=require('tedious').Request;
+var sql=require("mssql");
 
-var config={
-  userName:'ucabcm2',
-  password:'Mct.niub74110',
-  server:'nuffieldhealth20170610.database.windows.net',
-  database:'nuffieldhealth_db',
+var dbConfig={
+  server:"nuffieldhealth20170610.database.windows.net",
+  database:"nuffieldhealth_db",
+  user:"ucabcm2",
+  passwoed:"Mct.niub74110",
+  port:1433,
 
   options:{
     encrypt:true
   }
-}
-var connection=new Connection(config);
-connection.on('connect',function(err){
-  if(err){
-    console.log(err)
-  }
-  else{
-    insertIntoDatabase()
-  }
-});
+};
 
-function insertIntoDatabase(){
-  console.log('insert row into databse');
-  request=new Request(
-    "insert into staff (staffName) values ('neeb')",
-    function(err){}
-  );
-  connection.exeSql(request);
+function getCustomers(){
+  var conn= new sql.Connection(dbConfig);
+  conn.connect()
+  .then(function(){
+    console.log("connected");
+    conn.close();
+  })
+  .catch(function(err){
+    console.log(err);
+    conn.close();
+  });
+
 }
+
+getCustomers();
+
 ///////////////////////////////////////////////
 module.exports = app;
