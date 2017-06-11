@@ -51,8 +51,10 @@ var config={
   userName:'ucabcm2',
   password:'Mct.niub74110',
   server:'nuffieldhealth20170610.database.windows.net',
+  database:'nuffieldhealth_db',
+
   options:{
-    database:'nuffieldhealth_db'
+    encrypt:true
   }
 }
 var connection=new Connection(config);
