@@ -3,9 +3,9 @@ var sql = require("mssql");
 
 //Initiallising connection string
 var dbConfig = {
-    user:  'uabcm2',
+    user:  'ucabcm2',
     password: 'Mct.niub74110',
-    server: 'nuffieldhealth20170610.database.windows.net',
+    server: 'nuffieldhealth201706.database.windows.net',
     database: 'nuffieldhealth_db',
     options: {
       encrypt: true,
