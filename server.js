@@ -15,7 +15,8 @@ var dbConfig = {
 
 var connection = new sql.Connection(dbConfig);
 connection.connect().then(function(){
-  console.log("connected");
+  console.log("Connected!");
 }).catch(function(err){
+  console.log("connection failed!")
   console.log(err);
 });
