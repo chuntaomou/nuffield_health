@@ -5,7 +5,7 @@ var sql = require("mssql");
 var dbConfig = {
     user:  'ucabcm2',
     password: 'Mct.niub74110',
-    server: 'nuffieldhealth201706.database.windows.net',
+    server: 'nuffieldhealth20170610.database.windows.net',
     database: 'nuffieldhealth_db',
     options: {
       encrypt: true,
